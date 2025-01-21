@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px;
+        }
+        .product h3{
+            color: red;
+            margin-top: 15px;
+        }
+        .product p{
+            color: blue;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 30%;
+            margin: 15px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product img {
+            max-width: 100%;
+            height:70%;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        .add-to-cart {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function addToCart(button) {
+            button.parentElement.remove();
+        }
+        function showProductDetail(productPage) {
+            window.location.href = productPage;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="#">Products</a>
+        <a href="../contact/contact.html">Contact</a>
+    </div>
+
+    <div class="products">
+        <div class="product" onclick="showProductDetail('shoes.html')">
+           <a href="../Detail page/shoes.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhGIBTJqlH7fp_2rpsFQLlTvPHEO36pVF8LZo3NJM1fQoldRwvStH4RT0ejjEtqcgiAcw&usqp=CAU" alt="Shoes"></a>
+            <h3>Stylish Shoes</h3>
+            <p>Rs. 3000</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('tshirt.html')">
+           <a href="../Detail page/T-shirt.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0EWYAfvuDFhpF9nOGsJXJ7cMnCTQpueuVRaVC5kPrCXjRwolnFy7cWjrcvJMkUuPFA8&usqp=CAU" alt="T-Shirt"></a> 
+            <h3>Casual T-Shirt</h3>
+            <p>Rs. 1200</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('trouser.html')">
+           <a href="../Detail page/trouser.html"> <img src="https://mobile.yoox.com/images/items/30/30034028IG_14_r.jpg?impolicy=crop&width=387&height=490" alt="Trouser"></a>
+            <h3>Comfortable Trouser</h3>
+            <p>Rs. 2500</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('headphones.html')">
+           <a href="../Detail page/headphones.html"><img src="https://jolt.com.pk/cdn/shop/files/ScreenShot2024-03-19at4.42.37PM.png?v=1710848632" alt="Headphones"></a> 
+            <h3>Wireless Headphones</h3>
+            <p>Rs. 5000</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('watch.html')">
+           <a href="../Detail page/smartwatch.html"><img src="https://jujukart.com/wp-content/uploads/2022/04/Aqfit-W11-Smart-watch-product-image.webp" alt="Watch"></a> 
+            <h3>Smart Watch</h3>
+            <p>Rs. 7000</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('bag.html')">
+           <a href="../Detail page/bag.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0i-1PUdh6MahXuLs-64Tu2NDEeBwJwK6yA&s" alt="Bag"></a> 
+            <h3>Travel Bag</h3>
+            <p>Rs. 4000</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('glasses.html')">
+           <a href="../Detail page/glasses.html"><img src="https://img.drz.lazcdn.com/static/pk/p/b39e0262318fead4987cbeec3a93de63.jpg_720x720q80.jpg" alt="Glasses"></a> 
+            <h3>Stylish Glasses</h3>
+            <p>Rs. 1500</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('cap.html')">
+           <a href="../Detail page/cap.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUH8jUthfbl54TrZkLWnIWo1CzLzEZQ4G8aQ&s" alt="Cap"></a> 
+            <h3>Fashion Cap</h3>
+            <p>Rs. 800</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" onclick="showProductDetail('Analog-watch.html')">
+          <a href="../Detail page/analog.watch.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyhYZxk9K2hweehnzZxd3UkVfH3NuE37_O8Q&s" alt="Analog-watch"></a>  
+            <h3>Analog Watch</h3>
+            <p>Rs. 1200</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(this)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 E-Commerce Store. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

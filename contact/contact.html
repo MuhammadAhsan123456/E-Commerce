@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .input-field {
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .textarea-field {
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+            height: 150px;
+        }
+        .submit-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .submit-btn:active {
+            background-color: #004085;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .back-btn:hover {
+            background-color: #218838;
+        }
+        .back-btn:active {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p style="font-size: 18px; color: #666;">Agar aapko humse koi sawal karna ho ya kisi cheez ki madad chahiye ho, tou neeche form fill karain. Hum jald hi aap se raabta karain ge.</p>
+        
+        <div class="form-container">
+            <input type="text" class="input-field" placeholder="Aap ka naam" required>
+            <input type="email" class="input-field" placeholder="Aap ka email address" required>
+            <input type="text" class="input-field" placeholder="Aap ka phone number (optional)">
+            <textarea class="textarea-field" placeholder="Aap ka message" required></textarea>
+            <button class="submit-btn">Send Message</button>
+        </div>
+
+        <a href="../Product/product.html" class="back-btn">← Back to Products</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #fff;
+        }
+        .hero-text {
+            max-width: 50%;
+            letter-spacing: 1.5px;
+        }
+        .hero img {
+            max-width: 45%;
+            border-radius: 15px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+        }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 22%;
+            cursor: pointer;
+        }
+        .product h3{
+            color: teal;
+            margin-top: 25px;
+        }
+        .product p{
+            color: grey;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .product span{
+            color: red;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        .hero .hero-text h1{
+            color: red;
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .hero .hero-text p{
+            color: grey;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="./Product/product.html">Products</a>
+        <a href="./contact/contact.html">Contact</a>
+    </div>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Welcome to E-Commerce Store</h1>
+            <p>Yahan har cheez sasti aur achi milegi. Abhi apni pasand ka product choose karein!</p>
+        </div>
+        <img src="https://media.gettyimages.com/id/1369199360/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=gi&k=20&c=BFc13n-vhT4GMd0ohRt0PFD3IzJ_Onf6nKDAObgh1CA=" alt="E-Commerce Image">
+    </div>
+
+    <div class="products">
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhGIBTJqlH7fp_2rpsFQLlTvPHEO36pVF8LZo3NJM1fQoldRwvStH4RT0ejjEtqcgiAcw&usqp=CAU" alt="Shoes">
+            <h3>Stylish Shoes</h3>
+            <p>Comfortable and trendy shoes for all occasions.</p>
+            <span>Rs. 3000</span>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0EWYAfvuDFhpF9nOGsJXJ7cMnCTQpueuVRaVC5kPrCXjRwolnFy7cWjrcvJMkUuPFA8&usqp=CAU" alt="T-Shirt">
+            <h3>Casual T-Shirt</h3>
+            <p>Soft cotton t-shirt available in various colors.</p>
+            <span>Rs. 1200</span>
+        </div>
+        <div class="product">
+            <img src="https://mobile.yoox.com/images/items/30/30034028IG_14_r.jpg?impolicy=crop&width=387&height=490" alt="Trouser">
+            <h3>Comfortable Trouser</h3>
+            <p>Stylish and comfortable trousers for daily wear.</p>
+            <span>Rs. 2500</span>
+        </div>
+        <div class="product">
+            <img src="https://jolt.com.pk/cdn/shop/files/ScreenShot2024-03-19at4.42.37PM.png?v=1710848632" alt="Headphones">
+            <h3>Wireless Headphones</h3>
+            <p>High-quality sound with noise cancellation.</p>
+            <span>Rs. 5000</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 E-Commerce Store. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
+
+
+
+
