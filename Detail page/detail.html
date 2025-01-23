@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .product-img {
+            width: 50%;
+            height: 30rem;
+        }
+       
+        .back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.back-link:hover {
+    background-color: white;
+    color: #333;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+.product-details {
+    text-align: left;
+    padding: 20px 0;
+}
+
+#product-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+    margin: 10px 0;
+    background-color: #e8f5e9;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#product-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    border-left: 4px solid #333;
+    padding-left: 15px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../Product/product.html" class="back-link">← Back to Products</a>
+        <img id="product-image" class="product-img" src="" alt="Product Image">
+        <div class="product-details">
+            <h1 id="product-title">Product Title</h1>
+            <p id="product-price">Price: Rs. 0</p>
+            <p id="product-description">Product description goes here...</p>
+        </div>
+    </div>
+
+    <script>
+        async function loadProductDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            
+            if (productId) {
+                let response = await fetch(`https://fakestoreapi.com/products/${productId}`);
+                let product = await response.json();
+
+                document.getElementById('product-title').innerText = product.title;
+                document.getElementById('product-price').innerText = 'Price: Rs. ' + product.price;
+                document.getElementById('product-description').innerText = product.description;
+                document.getElementById('product-image').src = product.image;
+            } else {
+                document.body.innerHTML = '<h1>Product Not Found</h1>';
+            }
+        }
+
+        loadProductDetails();
+    </script>
+</body>
+</html>
